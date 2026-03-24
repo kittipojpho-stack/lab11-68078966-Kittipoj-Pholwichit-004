@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>หน้าเเรกของเว็บไซต์</title>
+        {% block title %}
+        {% endblock %}
+        <style>
+            body { height: 100%; margin: 0; font-family: sans-serif; }
+            body { display: grid; grid-template-rows: auto auto 1fr auto; min-height: 100vh; }
+            .nav-link { color: white; text-decoration: none; margin-left: 20px; }
+            .nav-link:hover { text-decoration: underline; }
+         
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://static0.cbrimages.com/wordpress/wp-content/uploads/2025/05/gojo-s-past-in-jujutsu-kaisen-2.jpeg?w=1600&h=900&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-text {
+            color: #ffffff;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 0;
+        }
+
+        </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a class="navbar-brand" href="#">ICT12367 SPU</a>
+    
+    <div class="ms-auto"> <ul class="navbar-nav flex-row"> <li class="nav-item me-3">
+                <a class="nav-link active" href="/">หน้าแรก</a>
+            </li>
+            <li class="nav-item me-3">
+                <a class="nav-link" href="about">เกี่ยวกับเรา</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="form">แบบฟอร์ม</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+        <div class="hero-section">
+            <h1 class="hero-text">ยินดีต้อนรับสู่เว็บไซต์ของรายวิชา ICT12367</h1>
+        </div>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+        <footer style="background-color: #333; color: white; text-align: center; padding: 15px; margin-top: 20px; font-size: 14px;">
+        © 2024 ICT12367 SPU | Information Technology
+        </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
